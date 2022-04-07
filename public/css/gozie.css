@@ -1,0 +1,454 @@
+::-webkit-scrollbar {
+    width: 5px;
+} /* this targets the default scrollbar (compulsory) */
+::-webkit-scrollbar-track {
+    /* box-shadow: inset 0 0 7px rgba(0,0,0,0.8);*/
+    background-color: #021D78;
+    /*border-radius: 8px;*/
+} /* the new scrollbar will have a flat appearance with the set background color */
+::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 100px #021D78;
+    background-color: #021D78; 
+    /*border-radius: 8px;*/
+} /* this will style the thumb, ignoring the track */
+
+::-webkit-scrollbar-button {
+    height: 0;
+    /* background-color: rgba(0,151,0,1);*/
+} /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+
+::-webkit-scrollbar-corner {
+    background-color: black;
+} /* if both the vertical and the horizontal bars appear, then perhaps the right bottom corner also needs to be styled */
+::-webkit-scrollbar-track-piece {
+    background-color: rgba(255, 255, 255, 1);	
+}
+::-webkit-scrollbar-button:horizontal {
+    width: 0px;
+/* Select the down or left scroll button when it's being hovered by the mouse */
+}
+
+html, body {
+    width: 100%;
+    height: 100vh;
+}
+nav {
+    background-color: #1849EF;
+    height: 55px;
+    line-height: 55px;
+}
+.navbar-fixed {
+    height: 55px;
+}
+nav .brand-logo {
+    padding-left: 2vw;
+}
+.smlIcon {
+    font-size: small;
+    font-weight: 800;
+}
+.centre {
+    text-align: center;
+}
+.catSect, .mainSect, .profile {
+    height: 89.8vh;
+}
+.catSect{
+    background-color: #1849EF;
+    color: white;
+    overflow: auto;
+}
+.mainSect{
+    background-color: white;
+    /*overflow: auto;*/
+}
+.mainSect .row:first-child {
+    margin-top: 3vh;
+    scroll-margin-bottom: 2vh;
+}
+.profileInner {
+    position: fixed;
+    padding: 0 1.5vh 0vh 0;
+}
+.profileInner .section {
+    padding: 0px;
+}
+.input-field input[type=search] ~ .material-icons {
+    color: white; 
+}
+
+@media only screen and (min-width: 993px){
+    nav #nav-mobile  a.sidenav-trigger {
+        display: block;
+    }
+}
+#mainRw.row {
+    margin-bottom: 0px;
+}
+.collection a.collection-item {
+    background-color: #1849EF;
+    color: #E4E8F5;
+}
+.collection .collection-item {
+    padding: 10px;
+}
+.collection {
+    border: #1849EF;
+    margin-top: 0px;
+    border-radius: 0px;
+}
+.collection .collection-item.active, .collection a.collection-item:hover {
+    background-color: #E4E8F5;
+    color: #1849EF;
+}
+.catSect.col {
+    padding: 0px;
+}
+table {
+    color: #039be5;
+}
+.yelo {
+    color: #F1A312;
+}
+table tr td {
+    padding: 8px 5px;
+}
+table tr td p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.sidenav-overlay {
+    z-index: 996;
+    }
+
+.modal#articleModal {
+    height: 95%;
+    max-height: 95%;
+    width: 95%;
+}
+.modal .modal-content#iframeDiv {
+    height: 100%;
+    margin:0px;
+    padding:0px;
+    overflow:hidden;
+}
+#articleModal iframe {
+    zoom:0.60;
+    overflow:hidden;
+    height:105%;
+    width:100%;
+}
+#articleModal i {
+    padding: 5px;
+    position: fixed;
+    right: 1vw;
+    top: 2vh;
+    cursor: pointer;
+}
+
+#articleModal i:hover {
+    background-color: black;
+    color: white;
+}
+.swiperWrapper {
+    display: flex;
+    overflow-x: hidden;
+    padding: 0.8vh 0;
+    scrollbar-width: none;
+}
+.swiperWrapper:hover {
+    overflow: auto;
+}
+.swiperWrapper::-webkit-scrollbar {
+    height: 3px !important;
+}
+.swiperWrapper::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 100px #9e9ea0;
+    background-color: #9e9ea0; 
+    /*border-radius: 8px;*/
+} 
+.swiperWrapper .swiperSlide {
+    background-color: rgb(224, 222, 222);
+    margin-left: 5px;
+    padding: 0.5vh 3vw;
+    border-radius: 3vw;
+    font-size: 0.9em;
+}
+.centr{
+    align-items: center;
+    justify-content: center;
+}
+#banner {
+    background-color: #29303b;
+    color: white;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+#tut h2 {
+    font-size:1.5rem;            
+    margin-top: 0;            
+}
+#tut h3 {
+    background-color: #900C3F;
+    color: whitesmoke;
+    font-size: 1.7rem; 
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 2vh 0.6vw;        
+}
+#banner h1 {
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 1.5vh;
+}
+#banner h2 {
+    font-weight: 350;
+}
+#uWillLearn, #cert, #desc, #req, #for {
+    padding-bottom: 2vh;
+    box-shadow: 0 8px 6px -6px rgb(73, 71, 71);          
+}
+#cert, #desc, #req, #for {
+    margin-top: 10vh;            
+}
+#content {
+    margin-top: 10vh;
+}
+
+#uWillLearn .row{
+    margin-bottom: 3vh;
+}
+
+#uWillLearn p, #cert p, #desc p, #content p, #req p, #for p {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+#uWillLearn h2, #cert h2, #desc h2, #content h2, #req h2, #for h2 {
+    color: #900C3F;
+    font-weight: 700;
+}
+#content .collapsible-body {
+    padding: 0;
+}
+#content .collapsible-header {
+    font-weight: bold;
+}
+#content .collection-item {
+    color: teal;
+    padding-left: 4vw;
+}
+.collapsible li.active .collapsible-header i {
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
+}
+
+.page-footer {
+    background-color: #1849EF;
+}
+
+#footNote {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+#phoneContact {
+    background-color: rgb(212, 206, 206);
+    padding-bottom: 3vh;
+}
+#desc p.contactTxt, #desc p.gutter {    
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+#desc p.contactTxt {
+    color: #900C3F;
+    font-weight: 800;
+}
+
+/**About me**/
+#meBanner {
+    width: 100%;
+    height: 89.8vh;
+    background-image: url('/img/home-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
+
+#meBannerCover {
+    width: 100%;
+    height: 89.8vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#meBanner h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-weight: 900;
+    color: white;
+    
+}
+
+#meBanner h1 span {
+    color: #1849EF;
+}
+#meBanner p{
+    text-align: center;
+    color: white;
+    font-size: 28px;
+}
+
+#meBanner p{
+    text-align: center;
+    color: white;
+    font-size: 28px;
+}
+
+#meBanner p span{
+    font-weight: 600;
+}
+#meDetail h2, #meDetail h3, #meResume h2, #meResume h3, #contact h2, #projects h2 {
+    font-family: "Playfair Display", serif;
+}
+#meDetail h2, #meResume h2, #contact h2, #projects h2 {
+    padding-left: 1vw;
+    padding-right: 1vw;
+    color: #1849EF;    
+}
+#meDetail h2 i, #meDetail .l3 i, #meResume h2 i, #contact h2 i, #projects h2 i {
+    font-size: 3.56rem;
+}
+
+#meDetail h3, #meResume h3 {
+    font-size: 1.7rem;
+}
+#meDetail h4 {
+    font-size: 1.5rem;
+}
+#meResume h4 {
+    font-size: 1.6rem;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+#meResume h5 {
+    font-size: 1rem;
+    margin-top: 1vh;
+}
+
+#meResume ul {
+    padding-left: 3vw;
+}
+#meDetail ul li span {
+    font-family: "Playfair Display", serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+#meResume ul.education li, #meResume ul.experience li {
+    position: relative;
+    margin-left: 10px;
+    padding: 20px;
+    transition: all .5s ease-in-out;
+    margin-bottom: 6vh;
+}
+
+#meResume ul.education li span.line-left, #meResume ul.experience li span.line-left {
+    width: 2px;
+    height: 100%;
+    background-color: #e1e1e1;
+    left: -10px;
+    top: 0;
+    position: absolute;
+}
+ul.experience li span.line-left, ul.education li span.line-left {
+    background-color: #00A3E1 !important;
+}
+#meResume ul.education li span.line-left:before, #meResume ul.education li span.line-left:after, #meResume ul.experience li span.line-left:before, #meResume ul.experience li span.line-left:after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    border: 2px solid #e1e1e1;
+    position: absolute;
+    left: -4px;
+    top: -10px;
+}
+#meResume ul.education li span.line-left:after, #meResume ul.experience li span.line-left:after {
+    top: 100%;
+}
+ul.experience li span.line-left:before, ul.experience li span.line-left:after, ul.education li span.line-left:before, ul.education li span.line-left:after {
+    border-color: #00A3E1 !important;
+}
+ul.experience li span.line-left:before, ul.experience li span.line-left:after, ul.education li span.line-left:before, ul.education li span.line-left:after {
+    border-color: #00A3E1 !important;
+}
+
+#meResume .education span.year, #meResume .experience span.year {
+    height: 100%;
+    left: -10px;
+    top: 0;
+    position: absolute;
+}
+
+#meResume .education span.year span, #meResume .experience span.year span {
+    font-size: 16px;
+    position: absolute;
+    transform: translateX(-120%);
+    color: rgb(82, 80, 80);
+}
+
+#meResume .education span.year span.to, #meResume .experience span.year span.to {
+    top: -18px;
+}
+#meResume .education span.year span.from, #meResume .experience span.year span.from {
+    bottom: -18px;
+}
+
+#python, #htmlCss, #js, #jquery, #php, #mysql {
+    width: 98%;
+}
+#react, #codeigniter, #mtrlcss, #bs, #rxNative{
+    width: 95%;
+}
+#node, #mongo, #express, #gtf {
+    width: 75%;
+}
+#vue, #ionic {
+    width: 85%;
+}
+#laravel, #flutter {
+    width: 60%;
+}
+
+#droid, #java {
+    width: 78%;
+}
+
+.success {
+    background-color: #4DD638;
+    color: white;
+}
+
+.error {
+    background-color: red;
+    color: white;
+}
+
+#about .page-footer {
+    padding-top: 0px;
+}
+
+/*About Me*/
+@media print {
+    .navbar-fixed, #contact, .page-footer {
+        display: none;
+    }
+}
